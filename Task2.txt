@@ -1,0 +1,11 @@
+A game I've recently enjoyed playing is Satisfactory which is an open world factory builder game. In it the player builds and processes materials through machines creating more complex materials and transporting them on conveyors. 
+
+For testing a core function of the game, machine processing. I would set up several test scenes that are intended to be repeated and give an expected outcome. Such as monitoring the amount of input going into the machines, what the output was, the overall time taken as well as looking at the flow of materials.
+
+For the first test would be the building of the machines themselves, have a test scene that automatically builds each machine, in different contexts, such as on slopes, directions and enclosed spaces and generate a report of machines that successfully built and failed. This report would outline which machine in what case scenario so that it would be easy to see which ones were building correctly.
+
+The second test is the machine operations, each machine would have ample supply of materials and would only be looking at the functioning of producing and energy consumption. Similar to the first test, it's a happy path test to ensure that all machine operations are correct. 
+
+Third test would be moving items in and out whilst losing and gaining power to see if there is any duplication or deletion of items. This is for rare cases that could occur in normal play, while not too bad for this kind of game it can still be important for very difficult items that would be lost.
+
+For each of these I would have a time scaler to run the tests quickly and a way to output a report to show visually the results between builds.

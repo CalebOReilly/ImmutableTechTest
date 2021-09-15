@@ -1,0 +1,9 @@
+Happy path test 1: Redeeming daily reward.
+Happy path test 2: Resetting reward availability after 24hrs.
+Edge case test: Handling reward reset if the user changes device timezone multiple times in the same 24hr period.
+
+For happy path test 1, I would create a basic scene of the application before the user has claimed the daily reward. From here have set flags for things triggering successfully such as UI clicks for claiming and the redemption process working. I would also monitor the items being added correctly and the ability to reclaim is not possible.
+
+Happy path test 2, Would verify that the time based reset of daily rewards is working correctly so that players can’t get more or less rewards than anyone else. This test would be set so the reward is already claimed at exactly 24hrs till next daily and time scaled to speed up testing to check that only after 24hrs pass is it possible to claim. Timestamps on start to when the next daily is available would suffice for this test. 
+
+Edge case test is to check for bugs with how robust the dailies are when under pressure from changing time zones either naturally for players travelling long distances or to stop players from cheating by manually resetting the daily without waiting for 24hrs. In this test the device time would rapidly change with changing time zones every few seconds. Using an internal solid timer that is not altered by device or time zone times as reference and verifying when the next redemption is available it would indicate that there is a problem if 24hr hasn’t passed.
